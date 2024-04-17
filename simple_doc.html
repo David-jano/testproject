@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>hello</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<style type="text/css">
+.transition
+    {
+			background-color: blue;
+			width: 50px;
+			transition: width 0.5s ease-in-out;
+			cursor: pointer;
+		}
+.transition:hover
+    {
+					width: 500px;
+		}
+
+/*input type formating*/
+
+input[type=text]{
+	box-sizing: border-box;
+	width: 100px;
+	height: 50px;
+	margin: 20px;
+	padding-left: 50px;
+	border-radius:10px;
+	transition: width 0.4s ease-in-out;
+	/*border: none;*/
+	/*border-bottom:1px dashed blue;*/
+
+
+/*formatting background for input*/
+	background-image:url('search.png');
+	background-repeat:no-repeat;
+	background-size:30px;
+	background-position: 10px 10px;
+	background-attachment: scroll;
+}
+input[type=text]:hover{
+	 width: 400px;
+}
+.list{
+	width:200px;
+	background-color: lightgray;
+	
+}
+
+.link{
+	position: relative;
+	display: inline-block;
+	background-color: dodgerblue;
+	padding: 4px;
+
+}
+
+.link:hover .list{
+	display: block;
+}
+
+.list{
+	position: absolute;
+	display:none;
+	max-width: 300px;
+}
+
+table{
+  font-family:arial;
+  border-collapse: collapse;
+  width: 500px;
+  text-align: center;
+}
+th{
+  color: white;
+  background-color: mediumseagreen;
+}
+tr:hover{
+  background-color: lightgray;
+}
+tr:nth-child(odd){
+  background-color:lightgrey;
+}
+.navigator{
+background-color: black;
+padding: 30px;
+width:40px;
+opacity: 60%;
+border-radius: 10px;
+right: 0px;
+cursor: pointer;
+float: right;
+position: sticky;
+}
+body{
+  scroll-behavior: smooth;
+  background-image: url('360_F_294798032_i3pg9SpMkrVhkKzdMNaZWRtsM9mc3p5c.jpg');
+  background-repeat: no-repeat;
+  background-size:1990px;
+}
+.navbar{
+  background-color: #000000;
+  border-left:20px solid tomato;
+  position: sticky;
+  top: 0px;
+  padding:25px;
+  opacity: 80%;
+  width: auto;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  color: tomato;
+}
+.sign
+{
+float: right;
+}
+.mydropdown{
+background-color:white ;
+border-top:3px solid tomato;
+position: absolute;
+top: 18px;
+left: 30px;
+width:200px;
+cursor: pointer;
+  }
+
+ .s1{
+  padding: 5px;
+ } 
+.s1:hover{
+background-color: lightgray;
+}
+.myservice{
+  position: relative;
+  display: inline-block;
+}
+.mydropdown{
+  display: none;
+  position: absolute;
+}
+.myservice:hover .mydropdown{
+  display: block;
+  animation-name:toggler;
+  animation-duration:0.8s;
+  animation-fill-mode: forwards;
+}
+@keyframes toggler{
+  from{opacity:0%;width: 0px;}
+  to{opacity: 100%;width: 200px;}
+}
+
+.hh{
+font-family:arial ;
+color: white;
+text-align: center;
+animation-name: header;
+animation-duration:2.3s;
+animation-fill-mode: forwards;
+}
+	@keyframes header{
+    from{font-size: 50px;}
+    to{font-size: 70px;}
+  }
+.h{
+  text-align: center;
+  font-family: arial;
+  color: white;
+
+}
+input[type=submit]{
+  animation-name: button;
+  animation-duration:1.5s;/*animation duration not delay*/
+  animation-fill-mode: forwards;
+height: 50px;
+background: none;
+width:70px;
+color: white;
+border: 2px solid white;
+border-radius:30px;
+font-size:20px;
+}
+
+@keyframes button{
+from{width: 50px;}
+to{width: 250px;}
+}
+
+input[type=submit]:hover{
+  background-color: tomato;
+}
+.card
+{
+  margin-left:300px;
+  width:400px;
+  height:525px ;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+}
+.card1{
+  margin-left:750px;
+  width:400px;
+  height:525px ;
+  border: 1px solid lightgray;
+  position: absolute;
+  left:0px ;
+  top: 790px;
+ border-radius: 6px;
+}
+.card2{
+  width:400px;
+  height:525px ;
+  border: 1px solid lightgray;
+position: absolute;
+left:1200px ;
+  top: 790px;
+   border-radius: 6px;
+}
+
+@keyframes imagetransition {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(180deg); }
+}
+
+/* Apply the keyframes within the hover selector */
+.myservice:hover .myimg {
+  animation: imagetransition; 
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards; /* Apply the animation on hover */
+}
+.img:hover{
+  opacity:60%;
+}
+.grad{
+  background-image:linear-gradient(blue,yellow,green);
+  box-shadow: 10px 11px 12px rgba(0, 140, 186, 0.5);
+}
+.grad{
+  -webkit-mask-image:url(search.png) ;
+  mask-image: url(search.png);
+  mask-repeat: no-repeat;
+}
+
+  </style>
+</head>
+<body>
+<div class="navbar">
+  <a href="">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <div class="myservice"><a href="">Services
+    <img src="istockphoto-1371014378-612x612.png" width="10px" class="myimg" />
+  </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<span class="mydropdown">
+  <p class="s1">Plumbing services</p>
+<p class="s1">Publishing Services</p>
+</span>
+</div>
+  <a href="">About Us</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="" class="sign">Sign up</a> 
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h1 class="hh">NEW SPECIES TECHNOLOGY</h1>
+<h2 class="h">We are here to serve you as daily clients
+  <br> <br>
+<input type="submit" name="" value="Discover More" />
+</h2>
+<br><br><br><br><br><br><br><br><br><br>
+
+
+<div class="card">
+  <img src="360_F_308445331_ZZinysRse5xOZacNTnoQqG24TAy7ftZ5.jpg" width="400px" class="img">
+  <h2 class="title">Lamboghini</h2>
+  <p class="subtitle">Specific car that was invented by the australian james grove, he was the best player but after time he was taken to the street called the new jersey to be used as the new mechanician because his father was good at mechanicien and he was after taken</p>
+<button class="go">Go somewhere</button>
+</div>
+
+<div class="card1">
+  <img src="360_F_308445331_ZZinysRse5xOZacNTnoQqG24TAy7ftZ5.jpg" width="400px" class="img">
+  <h2 class="title">Ferari</h2>
+  <p class="subtitle">Specific car that was invented by the australian james grove, he was the best player but after time he was taken to the street called the new jersey to be used as the new mechanician because his father was good at mechanicien and he was after taken</p>
+<button class="go">Go somewhere</button>
+</div>
+
+<div class="card2">
+  <img src="360_F_308445331_ZZinysRse5xOZacNTnoQqG24TAy7ftZ5.jpg" width="400px" class="img">
+  <h2 class="title">Tesla SUV</h2>
+  <p class="subtitle">Specific car that was invented by the australian james grove, he was the best player but after time he was taken to the street called the new jersey to be used as the new mechanician because his father was good at mechanicien and he was after taken</p>
+<button class="go">Go somewhere</button>
+</div>
+
+
+<div class="transition">hello</div>
+<form>
+	<input type="text" name="" placeholder="Search here...">
+</form>
+<div class="link">Pick day information
+
+<div class="list">
+	<ul style="list-style-type: none;">
+		<li style="background-color: mediumseagreen;padding:20px">1.Monday</li>
+		<li>2.Tuesday</li>
+		<li>3.Wednesday<ul><li>sub</li></ul></li>
+		<li>4.Thursday</li>
+		<li>5.Friday</li>
+	</ul>
+</div>
+</div>
+
+<table height="200px"><tr><th>#</th><th>Names</th><th>Percentage</th></tr>
+<tr><td>1</td><td>IRADUKUNDA Davis</td><td>80%</td></tr>
+<tr><td>2</td><td>NGENZI Derick</td><td>60%</td></tr>
+<tr><td>3</td><td>BARAKA Christa</td><td>90%</td></tr>
+<tr><td>4</td><td>ELIER Kendrick</td><td>440%</td></tr>
+<tr><td>5</td><td>ISHIMWE Khim</td><td>17%</td></tr>
+</table>
+
+<a href="student.html" target="_top">Others</a>
+
+<div class="navigator"><a href="#top" target="_top">Top</a></div>
+<video src="videos/RY - Love, RY (Official Music Video).mp4" autoplay="auto" controls  width="500px"></video>
+
+<embed src="videos/RY - Love, RY (Official Music Video).mp4" width="500px" height="290px"></embed>
+<embed src="musics/Yannick MKY Music - RIP POPE [Official Audio](MP3_160K).mp3" width="500px" height="290px"></embed>
+
+
+
+<div class="grad">hello rwanda
+<img src="360_F_308445331_ZZinysRse5xOZacNTnoQqG24TAy7ftZ5.jpg">
+</div>
+</body>
+</html>
